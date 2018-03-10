@@ -15,30 +15,27 @@ import { NotifyAdminComponent } from '../components/notify-admin/notify-admin.co
 const appRoutes: Routes = [
       { path: '', component: LoginComponent },
       { path: 'login', component: LoginComponent },
-    
-      { path: 'document', component: DocumentComponent,
-            children:[
-                  {path: '',component: DocumentListComponent , pathMatch: 'full'},
-                  {path: 'document-list',component: DocumentListComponent , pathMatch: 'full'},
-                  {path:'add-document',component: AddDocumentComponent ,
-                   children:[
-                        {path:'send-email',component:SendEmailComponent, pathMatch:'full'},
-                        {path:'publish-email',component:PublishEmailComponent, pathMatch:'full'},
-                        {path:'notify-admin',component:NotifyAdminComponent, pathMatch:'full'}
-                   ]
-                  },
-                  {path:'send-email',component:SendEmailComponent, pathMatch:'full'}
-            ],canActivate:[UserService]
+
+      {
+            path: 'document', component: DocumentComponent,
+            children: [
+                  { path: '', component: DocumentListComponent, pathMatch: 'full' },
+                  { path: 'document-list', component: DocumentListComponent, pathMatch: 'full' },
+                  { path: 'add-document', component: AddDocumentComponent, pathMatch: 'full' },
+                  { path: 'send-email', component: SendEmailComponent, pathMatch: 'full' },
+                  { path: 'publish-email', component: PublishEmailComponent, pathMatch: 'full' },
+                  { path: 'notify-admin', component: NotifyAdminComponent, pathMatch: 'full' },
+            ], canActivate: [UserService]
       },
-    
-     
+
+
 ];
 
 @NgModule({
       imports: [
-        RouterModule.forRoot(appRoutes) 
+            RouterModule.forRoot(appRoutes)
       ],
       exports: [RouterModule],
-      providers:[]
+      providers: []
 })
 export class AppRoutingModule { }
