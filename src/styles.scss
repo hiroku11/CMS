@@ -50,6 +50,13 @@ a:hover {
 .btn-sm {
     min-height: 30px;
 }
+.btn-icon{
+    padding: 0;
+    background: none;
+    &:hover{
+        background-color: none;
+    }
+}
 
 .input-group.search {
     .input-group-addon{

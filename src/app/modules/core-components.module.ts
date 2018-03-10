@@ -15,6 +15,13 @@ import { ErrorMessageComponent } from "../components/error-message/error-message
 import { SuccessMessageComponent } from "../components/sucess-message/sucess-message.component";
 import { OwlDateTimeModule, OWL_DATE_TIME_FORMATS } from 'ng-pick-datetime';
 import { OwlMomentDateTimeModule } from 'ng-pick-datetime-moment';
+import { DocumentComponent } from '../components/document/document.component';
+import { DocumentListComponent } from '../components/document/document-list/document-list.component';
+import { AddDocumentComponent } from '../components/document/add-document/add-document.component';
+import { SendEmailComponent } from '../components/send-email/send-email.component';
+import { PublishEmailComponent } from '../components/publish-email/publish-email.component';
+import { NotifyAdminComponent } from '../components/notify-admin/notify-admin.component';
+
 export const MY_MOMENT_FORMATS = {
     parseInput: 'DD/MM/YYYY HH:mm:ss',
     fullPickerInput: 'DD/MM/YYYY HH:mm:ss',
@@ -33,7 +40,12 @@ export const MY_MOMENT_FORMATS = {
         LoginComponent,
         SideNavComponent,
         DashboardComponent,
-       
+        DocumentComponent,
+        DocumentListComponent,
+        AddDocumentComponent,
+        NotifyAdminComponent,
+        SendEmailComponent,
+        PublishEmailComponent,
         AjaxLoaderComponent,
         ErrorMessageComponent,
         SuccessMessageComponent

@@ -1,3 +1,106 @@
-<p>
-  document-list works!
-</p>
+<div class="row">
+  <div class="col-md-6">
+    <h4>
+      <span class="fa fa-building"></span> Documents |
+      <button class="btn btn-info btn-sm" [routerLink]="'add-document'">
+        <span class="fa fa-plus"></span> Add</button>
+     </h4>
+  </div>
+  <div class="col-md-6">
+    <button class="btn btn-info btn-sm float-right ml-2" (click)="advancedSearch()">
+      <span class="fa fa-search"></span> Advance Search</button>
+    <div class="input-group search float-right">
+      <input class="form-control form-control-sm " placeholder="Search" />
+      <span class="input-group-addon">
+        <span class="fa fa-search"></span>
+      </span>
+    </div>
+
+  </div>
+</div>
+<table class="table table-bordered" >
+  <thead>
+    <th>
+       ID
+    </th>
+    <th>
+       Title
+    </th>
+    <th>
+      Type
+    </th>
+    <th>
+      Version
+    </th>
+    <th>
+     Classification 
+    </th>
+    <th>
+      Status 
+     </th>
+     <th>
+       Published
+     </th>
+     <th>
+       LMS Notified
+     </th>
+     <th>
+       Expiry Date
+     </th>
+     <th>
+       Never Expires
+     </th>
+     <th>
+       Author
+     </th>
+     <th>
+       Approver
+     </th>
+    <th style="width:200px"></th>
+  </thead>
+  <tbody>
+    <tr>
+     <td>
+       DOC001
+      </td>
+      <td>
+      HR Policy
+      </td>
+      <td>
+        PDF
+      </td>
+      <td>
+        1
+      </td>
+      <td>
+        Internal
+      </td>
+      <td>
+        Draft
+      </td>
+      <td>
+        N
+      </td>
+      <td>
+        N
+      </td>
+      <td>
+        01/01/2019
+      </td>
+      <td>
+        N
+      </td>
+      <td>
+        Smith
+      </td>
+      <td>
+        King
+      </td>
+      <td>
+        <button class="fa fa-envelope btn btn-icon" [routerLink]="'send-email'"></button>
+        <button class="fa fa-download btn btn-icon" (click)="downloadDoc(document)"></button>
+        <button class="fa fa-trash btn btn-icon" (click)="deleteDoc(document)"></button>
+      </td>
+    </tr>
+  </tbody>
+</table>

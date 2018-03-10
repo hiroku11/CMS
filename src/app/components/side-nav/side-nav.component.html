@@ -15,31 +15,11 @@
 </div>
 <div class="navbar">
     <ul>
-        <li [ngClass]="{active:thisView=='dashboard'}">
-            <a [routerLink]="['/dashboard']" title="">
-                <i class="fa fa-tasks"></i> Dashboard
+        <li [ngClass]="{active:thisView=='/'}">
+            <a [routerLink]="['/']" title="">
+                <i class="fa fa-file"></i> Document
             </a>
-        </li>
-        <li [ngClass]="{active:thisView=='building'}">
-            <a [routerLink]="['/buildings']" title="">
-                <i class="fa fa-building"></i> Building
-            </a>
-        </li>
-        <li [ngClass]="{active:thisView=='equipment'}">
-            <a [routerLink]="['/equipments']" title="">
-                <i class="fa fa-print"></i> Equipment
-            </a>
-        </li>
-        <li [ngClass]="{active:thisView=='vehicle'}">
-            <a [routerLink]="['/vehicles']" title="">
-                <i class="fa fa-bus"></i> Vehicle
-            </a>
-        </li>
-        <li [ngClass]="{active:thisView=='other'}">
-            <a [routerLink]="['/others']" title="">
-                <i class="fa fa-folder-open"></i> Other
-            </a>
-        </li>
+        </li>       
     </ul>
 
 </div>
