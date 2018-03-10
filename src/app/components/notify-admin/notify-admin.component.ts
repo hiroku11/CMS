@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notify-admin.component.scss']
 })
 export class NotifyAdminComponent implements OnInit {
-
+  documnet: any;
   constructor() { }
 
   ngOnInit() {
   }
-
+  save(){
+    
+  }
 }

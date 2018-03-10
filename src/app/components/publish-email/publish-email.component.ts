@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./publish-email.component.scss']
 })
 export class PublishEmailComponent implements OnInit {
-
+  documnet: any;
   constructor() { }
 
   ngOnInit() {
+  }
+  save(){
+
   }
 
 }

@@ -7,7 +7,7 @@
      </h4>
   </div>
   <div class="col-md-6">
-    <button class="btn btn-info btn-sm float-right ml-2" (click)="advancedSearch()">
+    <button class="btn btn-info btn-sm float-right ml-2">
       <span class="fa fa-search"></span> Advance Search</button>
     <div class="input-group search float-right">
       <input class="form-control form-control-sm " placeholder="Search" />
@@ -56,7 +56,7 @@
      <th>
        Approver
      </th>
-    <th style="width:200px"></th>
+    <th></th>
   </thead>
   <tbody>
     <tr>
@@ -97,9 +97,10 @@
         King
       </td>
       <td>
-        <button class="fa fa-envelope btn btn-icon" [routerLink]="'send-email'"></button>
-        <button class="fa fa-download btn btn-icon" (click)="downloadDoc(document)"></button>
-        <button class="fa fa-trash btn btn-icon" (click)="deleteDoc(document)"></button>
+        <span class="fa fa-envelope btn btn-sm  btn-outline-info" [routerLink]="'send-email'"></span>
+        <span class="fa fa-bell btn btn-sm  btn-outline-info" [routerLink]="'notify-admin'"></span>
+        <span class="fa fa-download btn btn-sm btn-outline-info"></span>
+        <span class="fa fa-trash btn btn-sm btn-outline-danger" ></span>
       </td>
     </tr>
   </tbody>

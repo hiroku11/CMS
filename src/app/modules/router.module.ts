@@ -19,7 +19,7 @@ const appRoutes: Routes = [
       { path: 'document', component: DocumentComponent,
             children:[
                   {path: '',component: DocumentListComponent , pathMatch: 'full'},
-                  {path: 'app-document-list',component: DocumentListComponent , pathMatch: 'full'},
+                  {path: 'document-list',component: DocumentListComponent , pathMatch: 'full'},
                   {path:'add-document',component: AddDocumentComponent ,
                    children:[
                         {path:'send-email',component:SendEmailComponent, pathMatch:'full'},

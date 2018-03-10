@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-document.component.css']
 })
 export class AddDocumentComponent implements OnInit {
-
+  documnet: any;
   constructor() { }
 
   ngOnInit() {
   }
+  selectCompareFunction(){
 
+  }
+  save(){
+    
+  }
 }

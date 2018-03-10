@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./send-email.component.scss']
 })
 export class SendEmailComponent implements OnInit {
-
+  documnet: any;
   constructor() { }
 
   ngOnInit() {
   }
-
+  save(){
+    
+  }
 }

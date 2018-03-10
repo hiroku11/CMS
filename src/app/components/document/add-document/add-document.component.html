@@ -1,7 +1,7 @@
 <div class="row pb-3">
     <div class="col-md-12">
       <h4>
-        <span class="fa fa-building"></span> Add Document</h4>
+        <span class="fa fa-folder"></span> Add Document</h4>
     </div>
   </div>
   
@@ -15,12 +15,12 @@
       </div>
       <div class="col-sm-12 col-md-4">
         <label>Title</label>
-        <input class="form-control" [(ngModel)]="building.buildingName" name="buildingName" />
+        <input class="form-control" [(ngModel)]="documnet.documnetName" name="documnetName" />
       </div>
    
       <div class="col-sm-12 col-md-4">
         <label>Status</label>
-        <select class="form-control"  [(ngModel)]="building.assetCategory.id">
+        <select class="form-control"  [(ngModel)]="documnet.assetCategory.id">
             <option value="null"></option>
             <option>New</option>
           </select>      
@@ -29,7 +29,7 @@
     <div class="row pb-2">
         <div class="col-sm-12">
             <label>Description</label>
-            <textarea class="form-control" [(ngModel)]="building.buildingDescription" name="buildingDescription"></textarea>
+            <textarea class="form-control" [(ngModel)]="documnet.documnetDescription" name="documnetDescription"></textarea>
           </div>
     </div>
   
@@ -37,14 +37,14 @@
     <div class="row pb-2">
       <div class="col-sm-12 col-md-4">
         <label>Document Classification</label>
-        <select class="form-control" [(ngModel)]="building.assetCategory.id">
+        <select class="form-control" [(ngModel)]="documnet.assetCategory.id">
           <option value="null"></option>
           <option>Internal</option>
         </select>
       </div>
       <div class="col-sm-12 col-md-4">
         <label>Published</label>
-        <select class="form-control" [compareWith]="selectCompareFunction" [(ngModel)]="building.organization">
+        <select class="form-control" [compareWith]="selectCompareFunction" [(ngModel)]="documnet.organization">
           <option value="null"></option>
           <option value="Y">Yes</option>
           <option value="N">No</option>
@@ -52,8 +52,8 @@
       </div>
       <div class="col-sm-12 col-md-4">
         <label>Published Date</label>
-        <input class="form-control" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" [disabled]="building.regulatoryCompliance != 'Y'"
-        [(ngModel)]="building.regCompObtainedDate" name="regCompObtainedDate" />
+        <input class="form-control" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" [disabled]="documnet.regulatoryCompliance != 'Y'"
+        [(ngModel)]="documnet.regCompObtainedDate" name="regCompObtainedDate" />
        <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time>
       </div>
     </div>
@@ -61,14 +61,14 @@
     <div class="row pb-2">
       <div class="col-sm-12">
         <label>Publish Comments</label>
-        <textarea class="form-control" [(ngModel)]="building.buildingDescription" name="buildingDescription"></textarea>
+        <textarea class="form-control" [(ngModel)]="documnet.documnetDescription" name="documnetDescription"></textarea>
       </div>
     </div>
   
     <div class="row pb-2">
       <div class="col-sm-12 col-md-4">
         <label>LMS Notified</label>
-        <select class="form-control" [(ngModel)]="building.regulatoryCompliance">
+        <select class="form-control" [(ngModel)]="documnet.regulatoryCompliance">
           <option value="null"></option>
           <option value="N">No</option>
           <option value="Y">Yes</option>
@@ -76,12 +76,12 @@
       </div>
       <div class="col-sm-12 col-md-4">
         <label>LMS Notified by</label>
-        <input class="form-control" [disabled]="building.regulatoryCompliance != 'Y'" [(ngModel)]="building.regulatoryAuthorityName" name="regulatoryAuthorityName" />
+        <input class="form-control" [disabled]="documnet.regulatoryCompliance != 'Y'" [(ngModel)]="documnet.regulatoryAuthorityName" name="regulatoryAuthorityName" />
       </div>
       <div class="col-sm-12 col-md-4">
         <label>LMS Notified Date</label>
-        <input class="form-control" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" [disabled]="building.regulatoryCompliance != 'Y'"
-         [(ngModel)]="building.regCompObtainedDate" name="regCompObtainedDate" />
+        <input class="form-control" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" [disabled]="documnet.regulatoryCompliance != 'Y'"
+         [(ngModel)]="documnet.regCompObtainedDate" name="regCompObtainedDate" />
         <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time>
       </div>
       
@@ -90,7 +90,7 @@
     <div class="row pb-2">
         <div class="col-sm-12">
           <label>LMS Notification Comments</label>
-          <textarea class="form-control" [(ngModel)]="building.buildingDescription" name="buildingDescription"></textarea>
+          <textarea class="form-control" [(ngModel)]="documnet.documnetDescription" name="documnetDescription"></textarea>
         </div>
       </div>
 
@@ -100,13 +100,13 @@
     <div class="row pb-2">
       <div class="col-sm-12 col-md-4">
         <label>Expiry Date</label>
-        <input class="form-control" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" [disabled]="building.regulatoryCompliance != 'Y'"
-         [(ngModel)]="building.regCompObtainedDate" name="regCompObtainedDate" />
+        <input class="form-control" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" [disabled]="documnet.regulatoryCompliance != 'Y'"
+         [(ngModel)]="documnet.regCompObtainedDate" name="regCompObtainedDate" />
         <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time>
       </div>
       <div class="col-sm-12 col-md-4">
         <label>Never Expires</label>
-        <select class="form-control" [(ngModel)]="building.fireExtinguishers">
+        <select class="form-control" [(ngModel)]="documnet.fireExtinguishers">
           <option value="null"></option>
           <option value="N">No</option>
           <option value="Y">Yes</option>
@@ -114,7 +114,7 @@
       </div>
       <div class="col-sm-12 col-md-4">
         <label>Approval Level</label>
-        <select class="form-control" [(ngModel)]="building.fireExtinguishers">
+        <select class="form-control" [(ngModel)]="documnet.fireExtinguishers">
             <option value="null"></option>
             <option>Level 3</option>
             <option>Leval 2</option>
@@ -143,13 +143,13 @@
         <div class="row pb-2">
             <div class="col-sm-12">
                 <label>File Description</label>
-                <textarea class="form-control" [(ngModel)]="building.buildingDescription" name="buildingDescription"></textarea>
+                <textarea class="form-control" [(ngModel)]="documnet.documnetDescription" name="documnetDescription"></textarea>
             </div>
         </div>
         <div class="row pb-2">
             <div class="col-sm-12 col-md-6">
                 <label>Status</label>
-                <select class="form-control" [(ngModel)]="building.fireExtinguishers">
+                <select class="form-control" [(ngModel)]="documnet.fireExtinguishers">
                     <option value="null"></option>
                     <option>Approved</option>
                     <option>Rejected</option>
@@ -252,8 +252,8 @@
                     <button class="fa fa-file btn btn-icon" [routerLink]="'publish-email'"></button>
                     <button class="fa fa-bell btn btn-icon" [routerLink]="'notify-admin'"></button>
                     <button class="fa fa-envelope btn btn-icon" [routerLink]="'send-email'"></button>
-                    <button class="fa fa-download btn btn-icon" (click)="downloadDoc(document)"></button>
-                    <button class="fa fa-trash btn btn-icon" (click)="deleteDoc(document)"></button>
+                    <button class="fa fa-download btn btn-icon" ></button>
+                    <button class="fa fa-trash btn btn-icon" ></button>
                   </td>
                 </tr>
               </tbody>
